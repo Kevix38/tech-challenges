@@ -1,0 +1,19 @@
+{
+    "name": "Scenarios",
+    "rootNamespace": "",
+    "references": [
+        "GUID:c3231aa82efc7e14eb134dfd318b0a2f",
+        "GUID:3246b05bb6c121e4790eb2b15fa660cb",
+        "GUID:714f9eb4fcd86e2439701effff8908e0",
+        "GUID:176c5f42cf6d18a4f8a36af35c824912"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,16 @@
+{
+    "name": "Feature.Random",
+    "rootNamespace": "",
+    "references": [
+        "GUID:c3231aa82efc7e14eb134dfd318b0a2f"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

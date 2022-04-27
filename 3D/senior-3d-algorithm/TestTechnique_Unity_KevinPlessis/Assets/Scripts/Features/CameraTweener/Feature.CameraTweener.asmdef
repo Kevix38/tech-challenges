@@ -1,0 +1,16 @@
+{
+    "name": "CameraTweener",
+    "rootNamespace": "",
+    "references": [
+        "GUID:714f9eb4fcd86e2439701effff8908e0"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
