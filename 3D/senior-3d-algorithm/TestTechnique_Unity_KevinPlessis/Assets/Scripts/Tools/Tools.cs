@@ -21,8 +21,8 @@ public static class Tools
         return bounds;
     }
 
-    //Extension method that calculate correct zoom distance from bounds and camera frustrumView
-    public static Vector3 FocusDistance(this Camera camera, GameObject focusedObject)
+    //Extension method that calculate correct zoom distance from bounds and camera frustrumView, now work with screen size ratio
+    public static Vector3 FocusDistance(this Camera camera, GameObject focusedObject, float crop = 1.2f)
     {
         Bounds bounds = focusedObject.GetBoundsWithChildren();
         
@@ -31,13 +31,22 @@ public static class Tools
         #endif
 
         float objectSize = bounds.extents.magnitude;
+        objectSize *= crop;
         float distance = objectSize / Mathf.Sin(Mathf.Deg2Rad * camera.fieldOfView * 0.5f);
+        
+        if(Screen.height > Screen.width)
+            distance *= (Screen.height/Screen.width);
+        else
+            distance *= (Screen.width/Screen.height);
 
         if(camera.orthographic)
             camera.orthographicSize = bounds.max.magnitude;
 
         camera.nearClipPlane = distance - objectSize;
         camera.farClipPlane = distance + objectSize;
+
+        Debug.Log("distance -> " +distance);
+
         return bounds.center - distance * camera.transform.forward;
     }
 
