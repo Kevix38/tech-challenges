@@ -28,6 +28,7 @@ public class CameraTransition : MonoBehaviour
             usedCamera = Camera.main;
     }
 
+    //smooth position to target
     public void SmoothTransition(GameObject focusTarget, Action<string> onFinish, float targetTime = 1.0f, float speedFactor = 1.0f)
     {
         StopAllCoroutines();
@@ -35,12 +36,14 @@ public class CameraTransition : MonoBehaviour
         StartCoroutine(ISmoothTransition(usedCamera.FocusDistance(focusTarget), onFinish, targetTime, speedFactor));
     }
 
+    //force position to target
     public void FocusOnWithoutTransition(GameObject focusTarget)
     {
         StopAllCoroutines();
         usedCamera.transform.position = usedCamera.FocusDistance(focusTarget);
     }
 
+    //recalculate correct focus distance after first finishing transition when screen size is changing 
     private void FixedUpdate() 
     {    
         if(!hasFinishTransiton)

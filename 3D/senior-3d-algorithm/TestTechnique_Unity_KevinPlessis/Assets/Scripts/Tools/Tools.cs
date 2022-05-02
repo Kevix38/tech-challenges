@@ -6,7 +6,6 @@ public static class Tools
     //Extension method that create bounds with all children from a specific parent
     public static Bounds GetBoundsWithChildren(this GameObject gameObject)
     {
-
         Renderer[] renderers = gameObject.GetComponentsInChildren<Renderer>();
         Bounds bounds = renderers.Length > 0 ? renderers[0].bounds : new Bounds();
 
@@ -44,8 +43,6 @@ public static class Tools
 
         camera.nearClipPlane = distance - objectSize;
         camera.farClipPlane = distance + objectSize;
-
-        Debug.Log("distance -> " +distance);
 
         return bounds.center - distance * camera.transform.forward;
     }
